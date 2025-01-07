@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/bootstrap-responsive.css" />
     <link rel="stylesheet" href="css/prettyPhoto.css" />
-    <link rel="stylesheet" href="css/flexslider.css" />
     <link rel="stylesheet" href="css/custom-styles.css" />
 
     <!--[if lt IE 9]>
@@ -26,52 +25,25 @@
     <!-- JS
 ================================================== -->
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/jquery.quicksand.js"></script>
     <script src="js/jquery.custom.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $("#btn-blog-next").click(function () {
-          $("#blogCarousel").carousel("next");
-        });
-        $("#btn-blog-prev").click(function () {
-          $("#blogCarousel").carousel("prev");
-        });
-
-        $("#btn-client-next").click(function () {
-          $("#clientCarousel").carousel("next");
-        });
-        $("#btn-client-prev").click(function () {
-          $("#clientCarousel").carousel("prev");
-        });
-      });
-
-      $(window).load(function () {
-        $(".flexslider").flexslider({
-          animation: "slide",
-          slideshow: true,
-          start: function (slider) {
-            $("body").removeClass("loading");
-          },
-        });
-      });
-    </script>
   </head>
 
-  <body class="home">
-    <!-- Color Bars (above header)-->
+  <body>
     <div class="color-bar-1"></div>
     <div class="color-bar-2 color-bg"></div>
 
-    <div class="container">
+    <div class="container main-container">
       <div class="row header">
         <!-- Begin Header -->
 
         <!-- Logo
         ================================================== -->
         <div class="span1 logo">
-          <a href="Beranda.htm"><img src="img/TWH.png" alt="" /></a>
+          <a href="Beranda.html"><img src="img/TWH.png" alt="" /></a>
         </div>
 
         <!-- Main Navigation
@@ -79,59 +51,32 @@
         <div class="span7 navigation">
           <div class="navbar hidden-phone">
             <ul class="nav">
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="Beranda.html">Beranda </a>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="Profil.html">Profil </a>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" href="Layanan.html">Layanan </a>
+              </li>
               <li class="dropdown active">
-                <a class="dropdown-toggle" href="Beranda.htm">Beranda </a>
+                <a class="dropdown-toggle" href="Galeri.html">Galeri </a>
               </li>
               <li class="dropdown">
-                <a class="dropdown-toggle" href="Profil.htm">Profil </a>
-              </li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" href="Layanan.htm">Layanan </a>
-              </li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" href="Galeri.htm">Galeri </a>
-              </li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" href="Kontak.htm">Kontak </a>
+                <a class="dropdown-toggle" href="Kontak.html">Kontak </a>
               </li>
             </ul>
           </div>
+
+          <!-- Mobile Nav
+            ================================================== -->
         </div>
       </div>
       <!-- End Header -->
 
-      <div class="row headline">
-        <!-- Begin Headline -->
-
-        <!-- Slider Carousel
-        ================================================== -->
-        <div class="span5">
-          <div class="flexslider">
-            <ul class="slides">
-              <li>
-                <a href="Galeri.htm"><img src="img/gallery/Slide1.jpg" alt="slider" /></a>
-              </li>
-              <li>
-                <a href="Galeri.htm"><img src="img/gallery/Slide2.jpg" alt="slider" /></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Headline Text
-        ================================================== -->
-        <div class="span4">
-          <h3>
-            Selamat Datang di SMPN 1 Kembaran. <br />
-            SMPN 1 Kembaran Jaya Selalu.
-          </h3>
-          <p class="lead">Gedung-gedung yang berderet, adanya koperasi, lapangan dan UKS mini menggambarkan sebagian kecil sarana yang ada di sekolah.</p>
-          <p>Karena setiap tingkatan dibagi menjadi A, B dan C membuat suasana di lingkungan sekolah menjadi ramai. Mungkin karena keindahan warna dan pernak-pernik pada setiap ruang kelas membuat anak-anak menjadi nyaman saat belajar.</p>
-          <a href="#"><i class="icon-plus-sign"></i>Lihat Selengkapnya</a>
-        </div>
-      </div>
-      <!-- End Headline -->
-
+      <!-- Page Content
+    ================================================== -->
       <div class="row gallery-row">
         <!-- Begin Gallery Row -->
 
@@ -148,11 +93,11 @@
                 <span class="gallery-hover-4col hidden-phone hidden-tablet">
                   <span class="gallery-icons">
                     <a href="img/gallery/Ekskul1.jpg" class="item-zoom-link lightbox" title="Ini Contoh Ekskul Tari" data-rel="prettyPhoto"></a>
-                    <a href="gallery-single.htm" class="item-details-link"></a>
+                    <a href="gallery-single.html" class="item-details-link"></a>
                   </span>
                 </span>
-                <a href="gallery-single.htm"><img src="img/gallery/Ekskul1.jpg" alt="Gallery" /></a>
-                <span class="project-details"><a href="gallery-single.htm">Seni Tari</a>Ini Contoh Ekskul Tari.</span>
+                <a href="gallery-single.html"><img src="img/gallery/Ekskul1.jpg" alt="Gallery" /></a>
+                <span class="project-details"><a href="gallery-single.html">Seni Tari</a>Ini Contoh Ekskul Tari.</span>
               </li>
 
               <!-- Gallery Item 2 -->
@@ -160,11 +105,11 @@
                 <span class="gallery-hover-4col hidden-phone hidden-tablet">
                   <span class="gallery-icons">
                     <a href="img/gallery/Ekskul2.jpg" class="item-zoom-link lightbox" title="Ini Contoh Ekskul Marawis." data-rel="prettyPhoto"></a>
-                    <a href="gallery-single.htm" class="item-details-link"></a>
+                    <a href="gallery-single.html" class="item-details-link"></a>
                   </span>
                 </span>
-                <a href="gallery-single.htm"><img src="img/gallery/Ekskul2.jpg" alt="Gallery" /></a>
-                <span class="project-details"><a href="gallery-single.htm">Marawis</a>Ini Contoh Ekskul Marawis.</span>
+                <a href="gallery-single.html"><img src="img/gallery/Ekskul2.jpg" alt="Gallery" /></a>
+                <span class="project-details"><a href="gallery-single.html">Marawis</a>Ini Contoh Ekskul Marawis.</span>
               </li>
 
               <!-- Gallery Item 3 -->
@@ -175,8 +120,8 @@
                     <a href="#" class="item-details-link"></a>
                   </span>
                 </span>
-                <a href="gallery-single.htm"><img src="img/gallery/Ekskul3.webp" alt="Gallery" /></a>
-                <span class="project-details"><a href="gallery-single.htm">PMR</a>Ini Contoh Ekskul PMR.</span>
+                <a href="gallery-single.html"><img src="img/gallery/Ekskul3.webp" alt="Gallery" /></a>
+                <span class="project-details"><a href="gallery-single.html">PMR</a>Ini Contoh Ekskul PMR.</span>
               </li>
 
               <!-- Gallery Item 4 -->
@@ -184,11 +129,59 @@
                 <span class="gallery-hover-4col hidden-phone hidden-tablet">
                   <span class="gallery-icons">
                     <a href="img/gallery/Ekskul4.jpeg" class="item-zoom-link lightbox" title="Ini Contoh Ekskul Pramuka." data-rel="prettyPhoto"></a>
-                    <a href="gallery-single.htm" class="item-details-link"></a>
+                    <a href="gallery-single.html" class="item-details-link"></a>
                   </span>
                 </span>
-                <a href="gallery-single.htm"><img src="img/gallery/Ekskul4.jpeg" alt="Gallery" /></a>
-                <span class="project-details"><a href="gallery-single.htm">Pramuka</a>Ini Contoh Ekskul Pramuka.</span>
+                <a href="gallery-single.html"><img src="img/gallery/Ekskul4.jpeg" alt="Gallery" /></a>
+                <span class="project-details"><a href="gallery-single.html">Pramuka</a>Ini Contoh Ekskul Pramuka.</span>
+              </li>
+
+              <!-- Gallery Item 4 -->
+              <li class="span3 gallery-item" data-id="id-4" data-type="video">
+                <span class="gallery-hover-4col hidden-phone hidden-tablet">
+                  <span class="gallery-icons">
+                    <a href="img/gallery/Ekskul4.jpeg" class="item-zoom-link lightbox" title="Ini Contoh Ekskul Pramuka." data-rel="prettyPhoto"></a>
+                    <a href="gallery-single.html" class="item-details-link"></a>
+                  </span>
+                </span>
+                <a href="gallery-single.html"><img src="img/gallery/Ekskul4.jpeg" alt="Gallery" /></a>
+                <span class="project-details"><a href="gallery-single.html">Pramuka</a>Ini Contoh Ekskul Pramuka.</span>
+              </li>
+
+              <!-- Gallery Item 3 -->
+              <li class="span3 gallery-item" data-id="id-3" data-type="web">
+                <span class="gallery-hover-4col hidden-phone hidden-tablet">
+                  <span class="gallery-icons">
+                    <a href="img/gallery/Ekskul3.webp" class="item-zoom-link lightbox" title="Ini Contoh Ekskul PMR." data-rel="prettyPhoto"></a>
+                    <a href="#" class="item-details-link"></a>
+                  </span>
+                </span>
+                <a href="gallery-single.html"><img src="img/gallery/Ekskul3.webp" alt="Gallery" /></a>
+                <span class="project-details"><a href="gallery-single.html">PMR</a>Ini Contoh Ekskul PMR.</span>
+              </li>
+
+              <!-- Gallery Item 2 -->
+              <li class="span3 gallery-item" data-id="id-2" data-type="illustration">
+                <span class="gallery-hover-4col hidden-phone hidden-tablet">
+                  <span class="gallery-icons">
+                    <a href="img/gallery/Ekskul2.jpg" class="item-zoom-link lightbox" title="Ini Contoh Ekskul Marawis." data-rel="prettyPhoto"></a>
+                    <a href="gallery-single.html" class="item-details-link"></a>
+                  </span>
+                </span>
+                <a href="gallery-single.html"><img src="img/gallery/Ekskul2.jpg" alt="Gallery" /></a>
+                <span class="project-details"><a href="gallery-single.html">Marawis</a>Ini Contoh Ekskul Marawis.</span>
+              </li>
+
+              <!-- Gallery Item 1 -->
+              <li class="span3 gallery-item" data-id="id-1" data-type="illustration">
+                <span class="gallery-hover-4col hidden-phone hidden-tablet">
+                  <span class="gallery-icons">
+                    <a href="img/gallery/Ekskul1.jpg" class="item-zoom-link lightbox" title="Ini Contoh Ekskul Tari" data-rel="prettyPhoto"></a>
+                    <a href="gallery-single.html" class="item-details-link"></a>
+                  </span>
+                </span>
+                <a href="gallery-single.html"><img src="img/gallery/Ekskul1.jpg" alt="Gallery" /></a>
+                <span class="project-details"><a href="gallery-single.html">Seni Tari</a>Ini Contoh Ekskul Tari.</span>
               </li>
             </ul>
           </div>
@@ -200,7 +193,6 @@
 
     <!-- Footer Area
         ================================================== -->
-
     <div class="footer-container">
       <!-- Begin Footer -->
       <div class="container">
